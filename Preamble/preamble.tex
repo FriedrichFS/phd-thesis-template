@@ -5,8 +5,8 @@
 % Set {innerside margin / outerside margin / topmargin / bottom margin}  and
 % other page dimensions
 \ifsetCustomMargin
-  \RequirePackage[left=37mm,right=30mm,top=35mm,bottom=30mm]{geometry}
-  \setFancyHdr % To apply fancy header after geometry package is loaded
+  \RequirePackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+  \setFancyHdr % This command sets up fancy headers and footers (if you use them)
 \fi
 
 % Add spaces between paragraphs
@@ -21,6 +21,10 @@
 % ******************* Fonts (like different typewriter fonts etc.)*************
 
 % Add `customfont' in the document class option to use this section
+
+\usepackage{setspace}
+\setstretch{1.5}  % Sets line spacing to 1.5
+\setlength{\parskip}{9pt} 
 
 \ifsetCustomFont
   % Set your custom font here and use `customfont' in options. Leave empty to
@@ -56,7 +60,7 @@
 
 \RequirePackage[labelsep=space,tableposition=top]{caption}
 \renewcommand{\figurename}{Fig.} %to support older versions of captions.sty
-
+\renewcommand{\footnotesize}{\fontsize{10pt}{12pt}\selectfont}
 
 % *************************** Graphics and figures *****************************
 
